@@ -14,7 +14,7 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
-app.post('dashboard.html', (req, res) => {
+app.post('/dashboard.html', (req, res) => {
     // Validate user's credentials (replace this with actual validation)
     if (req.body.username === 'user' && req.body.password === 'password') {
         req.session.loggedIn = true;
