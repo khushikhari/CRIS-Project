@@ -18,7 +18,7 @@ app.post('dashboard.html', (req, res) => {
     // Validate user's credentials (replace this with actual validation)
     if (req.body.username === 'user' && req.body.password === 'password') {
         req.session.loggedIn = true;
-        res.redirect('dashboard.html');
+        res.redirect('/dashboard.html');
     } else {
         res.redirect('/');
     }
