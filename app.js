@@ -1,4 +1,25 @@
-const express = require('express');
+
+// app.js
+
+document.getElementById("loginForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent the default form submission
+
+    // Basic form validation or additional logic can be added here
+
+    const username = event.target.username.value;
+    const password = event.target.password.value;
+
+    // For demonstration purposes, we'll assume successful login if any username/password is entered
+    if (username && password) {
+        // Redirect to dashboard.html
+        window.location.href = "dashboard.html";
+    } else {
+        alert("Please enter both username and password.");
+    }
+});
+
+
+/*const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
 const session = require('express-session');
@@ -34,4 +55,4 @@ app.get('dashboard.html', (req, res) => {
 
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
-});
+});*/
